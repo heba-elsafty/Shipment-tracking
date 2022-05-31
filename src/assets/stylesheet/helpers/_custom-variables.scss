@@ -1,0 +1,48 @@
+/* ===============================
+       gray color Variables
+ =============================== */
+$gray-500: #646a7c !default;
+$black:    #000;
+$white:    #fff;
+
+/* ===============================
+       map gray color
+ =============================== */
+$grays: (
+  "500": $gray-500,
+);
+
+/* ===============================
+        Color Variables
+ =============================== */
+$primary: #e30613;
+$warning: #f9ba02;
+$danger:  #e30613;
+$success: #36b600;
+
+/* ===============================
+        map theme color
+ =============================== */
+$theme-colors: (
+  primary: $primary,
+  warning: $warning,
+  danger: $danger,
+  success: $success,
+  medium-gray: $gray-500,
+  white: $white,
+  dark: $black,
+);
+
+/* ===============================
+        Body color Variables
+ =============================== */
+$body-color: $gray-500;
+
+
+/* ===============================
+         Fonts Variables
+ =============================== */
+ $font-path: "../../fonts";
+
+$font-size-base: 1rem; // 16px
+$base-font-family: 'Cairo', sans-serif

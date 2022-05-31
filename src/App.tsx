@@ -1,4 +1,5 @@
-import './App.css';
+// SCSS
+import './assets/stylesheet/App.scss';
 
 
 function App() {
