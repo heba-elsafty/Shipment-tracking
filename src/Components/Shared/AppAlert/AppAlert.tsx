@@ -2,7 +2,7 @@ import Alert from "react-bootstrap/Alert"
 import Icon from "../Icon/Icon";
 
 
-interface AlertProps {
+interface IAlertProps {
   message: string,
   alertClassName?: string,
   type?: "error" | "success" | any,
@@ -12,7 +12,7 @@ interface AlertProps {
 }
 
 
-const AppAlert = ({variant, message, alertClassName, type, iconName, hasIcon }: AlertProps) => {
+const AppAlert = ({variant, message, alertClassName, type, iconName, hasIcon }: IAlertProps) => {
 
   const ALERTTYPE: any = {
     default: {

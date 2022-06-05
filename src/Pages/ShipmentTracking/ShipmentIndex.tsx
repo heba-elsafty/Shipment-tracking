@@ -15,14 +15,14 @@ import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet';
 
-interface CurrentStatusObject {
+interface ICurrentStatusObject {
   state: string,
   timestamp: string,
   code: number,
 };
 
 interface ITrack {
-  CurrentStatus: CurrentStatusObject,
+  CurrentStatus: ICurrentStatusObject,
   shipperName: string,
   trackingNumber: number,
   PromisedDate: string,
@@ -54,15 +54,19 @@ const ShipmentIndex = () => {
   });
 
 
-  const [error, setError] = useState(false)
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
+        setLoading(true);
         const res = await axios.get(`https://tracking.bosta.co/shipments/track/${id}?lang=${i18n.language}`)
         setTrack(res.data)
       } catch (e: any) {
           setError(true)
+      } finally {
+        setLoading(false)
       }
     }
     console.log(id)
@@ -90,7 +94,7 @@ const ShipmentIndex = () => {
 
         <Row>
           <Col lg={8}>
-            <ShipmentDetails shipmentDetails={track.TransitEvents} />
+            <ShipmentDetails shipmentDetails={track.TransitEvents} loading={loading} />
           </Col>
           <Col lg={4}>
             <DeliveryAddress />

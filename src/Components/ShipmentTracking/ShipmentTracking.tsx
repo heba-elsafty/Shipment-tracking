@@ -5,7 +5,7 @@ import moment from "moment";
 import AppAlert from "../Shared/AppAlert/AppAlert";
 import ProgressBar from "../ProgressBar/ProgressBar";
 
-interface ShipmentTrackProps {
+interface IShipmentTrackProps {
   trackNum: string | number | undefined,
   ShipmentTrackStatus: string,
   lastUpdateShipment: string,
@@ -24,7 +24,7 @@ const ShipmentTracking = ({
   deliveryTime,
   isInvalidTrackingNumber,
   CurrentShipmentCode,
-}: ShipmentTrackProps) => {
+}: IShipmentTrackProps) => {
   const { t, i18n } = useTranslation(["shipmentTracking", "translation"]);
   const time = i18n.language === "ar" ? "LTA" : "LT";
 
@@ -72,8 +72,6 @@ const ShipmentTracking = ({
           }
         </div>
         {!isInvalidTrackingNumber && <ProgressBar currentShipmentCode={CurrentShipmentCode} currentState={ShipmentTrackStatus} />}
-
-
       </div>
     </>
   )

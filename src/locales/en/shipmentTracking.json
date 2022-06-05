@@ -26,5 +26,7 @@
     "onHold": "On hold",
     "delivered": "Delivered",
     "returned": "Returned"
-  }
+  },
+  "problemWithYourShipment": "Is there a problem with your shipment?!",
+  "reportAProblem": "Report a problem"
 }

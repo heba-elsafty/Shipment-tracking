@@ -25,5 +25,7 @@
     "onHold": "في الانتظار",
     "delivered": "تم تسليم الأوردر",
     "returned": ""
-  }
+  },
+  "problemWithYourShipment": "هل يوجد مشكلة فى شحنتك ؟!",
+  "reportAProblem": "إبلاغ عن مشكلة"
 }

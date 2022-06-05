@@ -13,3 +13,7 @@ body {
   font-family: $base-font-family;
   height: 100%;
 }
+
+img {
+  object-fit: cover;
+}

@@ -19,6 +19,10 @@
       left: 0;
       right: 0;
       z-index: 9;
+
+      @media screen and (max-width: 768px) {
+        top: 23%;
+      }
     }
 
     @if $state == "onhold" or $state == "returned" {
@@ -50,6 +54,10 @@
     right: 2rem;
     height: 0.5rem;
     z-index: 9;
+
+    @media screen and (max-width: 768px) {
+      top: 23%;
+    }
   }
 
   &__steps {
@@ -77,6 +85,27 @@
       .icon-truck {
         zoom: 1.5;
       }
+
+      @media screen and (max-width: 768px) {
+        margin-top: 0;
+        top: 1rem;
+        width: 2rem;
+        height: 2rem;
+        line-height: 1.5;
+
+        #ar & {
+          top: 0.5rem;
+        }
+
+        svg {
+          width: 14px;
+          height: 15px;
+        }
+
+        .icon-truck {
+          zoom: 2;
+        }
+      }
     }
 
     &--complete {
@@ -86,6 +115,13 @@
         line-height: 1;
         margin-bottom: 2rem;
         top: 1rem;
+
+        @media screen and (max-width: 768px) {
+          top: 1.3rem;
+          #ar & {
+            top: 0.9rem;
+          }
+        }
       }
     }
 

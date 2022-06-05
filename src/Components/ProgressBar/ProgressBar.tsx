@@ -5,12 +5,12 @@ import Icon from "../Shared/Icon/Icon";
 import "./ProgressBarStyle.scss";
 
 
-interface ProgressBarProps {
+interface IProgressBarProps {
   currentState: string,
   currentShipmentCode: number
 }
 
-interface StepsProps {
+interface IStepsProps {
   id: number,
   label: string,
   state: string,
@@ -19,7 +19,7 @@ interface StepsProps {
   active: boolean,
 }
 
-const ProgressBar = ({ currentState, currentShipmentCode }: ProgressBarProps) => {
+const ProgressBar = ({ currentState, currentShipmentCode }: IProgressBarProps) => {
   const { t } = useTranslation("shipmentTracking");
 
   const steps = useMemo(() => [
@@ -81,7 +81,7 @@ const ProgressBar = ({ currentState, currentShipmentCode }: ProgressBarProps) =>
   })
 
 
-  const setPreviousStepsPropsFromIdx = (idx: number, steps: StepsProps | any, prop: any) => {
+  const setPreviousStepsPropsFromIdx = (idx: number, steps: IStepsProps | any, prop: any) => {
     for (let i = idx; i > 0; i--) {
       steps[i][prop.name] = prop.value
     }
@@ -116,7 +116,7 @@ const ProgressBar = ({ currentState, currentShipmentCode }: ProgressBarProps) =>
                 <div className={`progress__state__icon`} >
                   <Icon iconName={step.complete ? "check" : step.icon} iconSize={step.complete ? 15 : 25} />
                 </div>
-                <h6 className="text-dark-blue mt-2"> {step.label} </h6>
+                <h6 className="text-dark-blue mt-4 mt-md-2 px-1 px-lg-0"> {step.label} </h6>
               </div>
             </>
 

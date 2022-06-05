@@ -1,6 +1,6 @@
 import Icons from "./IconsSvg.svg"
 
-interface IconProps {
+interface IIconProps {
   iconName: string,
   iconColor?: string,
   iconSize?: number,
@@ -8,7 +8,7 @@ interface IconProps {
   style?: object,
 };
 
-const Icon = ({ iconName, iconSize, className, style, iconColor }: IconProps) => {
+const Icon = ({ iconName, iconSize, className, style, iconColor }: IIconProps) => {
   return (
     <svg
       className={`icon icon-${iconName} ${className ?? ""}`}
