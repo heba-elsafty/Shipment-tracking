@@ -1,0 +1,29 @@
+{
+  "trackingShipment": "تتبع الشحنة",
+  "shipmentNumber": "رقم الشحنة",
+  "lastUpdate": "اخر تحديث",
+  "shipperName": "اسم التاجر",
+  "unknown": "غير معروف",
+  "deliveryTime": "موعد التسليم خلال",
+  "invalidTrackingNumber": "رقم تتبع غير صحيح",
+  "noShipmentWithThisNumber": "لا يوجد شحنة بهذا الرقم",
+  "shipmentDetails": {
+    "shipmentDetails": "تفاصيل الشحنة ",
+    "branch": "الفرع",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "details": "التفاصيل"
+  },
+  "deliveryAddress": "عنوان التوصيل",
+  "steps": {
+    "createTheShipment": "تم انشاء الشحنة",
+    "receivedFromTheShipper": "تم استلام الشحنة من التاجر",
+    "outForDelivery": "الشحنة خرجت للتسليم",
+    "delivered": "تم التسليم"
+  },
+  "currentState": {
+    "onHold": "في الانتظار",
+    "delivered": "تم تسليم الأوردر",
+    "returned": ""
+  }
+}

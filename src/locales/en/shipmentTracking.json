@@ -1,0 +1,30 @@
+{
+  "trackingShipment": "Tracking Shipment",
+  "shipmentNumber": "Shipment Number",
+  "lastUpdate": "Last update",
+  "shipperName": "Shipper  name",
+  "unknown": "Unknown",
+  "deliveryTime": "Delivery Time",
+  "invalidTrackingNumber": "Invalid Tracking Number",
+  "noShipmentWithThisNumber": "There is no shipment with this number",
+  "details": "Shipment details",
+  "shipmentDetails": {
+    "shipmentDetails": "Shipment details ",
+    "branch": "Branch",
+    "date": "Date",
+    "time": "Time",
+    "details": "Details"
+  },
+  "deliveryAddress": "Delivery address",
+  "steps": {
+    "createTheShipment": "Create the shipment",
+    "receivedFromTheShipper": "The shipment has been received from the shipper",
+    "outForDelivery": "The shipment is out for delivery",
+    "delivered": "Delivered"
+  },
+  "currentState": {
+    "onHold": "On hold",
+    "delivered": "Delivered",
+    "returned": "Returned"
+  }
+}

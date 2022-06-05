@@ -1,0 +1,46 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "border-opacity": (
+      css-var: true,
+      class: br-opacity,
+      values: (
+        10: 0.1,
+        25: 0.25,
+        50: 0.5,
+        75: 0.75,
+        100: 1,
+      ),
+    ),
+    "width": (
+      property: width,
+      class: w,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        1: 1rem,
+        2: 1rem,
+        3: 3rem,
+        4: 4rem,
+      ),
+    ),
+    "height": (
+      property: height,
+      class: h,
+      values: (
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto,
+        1: 1rem,
+        2: 1rem,
+        3: 3rem,
+        4: 4rem,
+      ),
+    ),
+  )
+);

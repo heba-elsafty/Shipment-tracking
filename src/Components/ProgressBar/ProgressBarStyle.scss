@@ -1,0 +1,134 @@
+@import "../../assets/stylesheet/helpers/custom-variables";
+
+@mixin progress-state($state, $color) {
+  &--#{$state} {
+    .progress__state__icon {
+      background-color: $color;
+      border-color: $color;
+      svg {
+        fill: $white;
+      }
+    }
+
+    &::before {
+      content: "";
+      height: 0.5rem;
+      background-color: $color;
+      position: absolute;
+      top: 46%;
+      left: 0;
+      right: 0;
+      z-index: 9;
+    }
+
+    @if $state == "onhold" or $state == "returned" {
+      &:nth-child(3) {
+        &::before {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.progress {
+  position: relative;
+  .line-active {
+    height: 0.5rem;
+    background-color: aquamarine;
+    position: absolute;
+    top: 46%;
+    left: 0;
+    right: 0;
+    z-index: 9;
+  }
+  &__line {
+    background-color: $gray-200;
+    position: absolute;
+    top: 46%;
+    left: 2rem;
+    right: 2rem;
+    height: 0.5rem;
+    z-index: 9;
+  }
+
+  &__steps {
+    text-align: center;
+  }
+
+  &__state {
+    position: relative;
+    &__icon {
+      margin-top: 1rem;
+      background-color: $white;
+      border: 2px solid $gray-300;
+      border-width: 2px;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      line-height: 2.5;
+      text-align: center;
+      z-index: 10;
+      position: relative;
+
+      svg {
+        fill: $gray-300;
+      }
+      .icon-truck {
+        zoom: 1.5;
+      }
+    }
+
+    &--complete {
+      .progress__state__icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+        top: 1rem;
+      }
+    }
+
+    @include progress-state("onhold", $warning);
+    @include progress-state("returned", $danger);
+    @include progress-state("delivered", $success);
+
+    &:last-child {
+      .progress__state__icon {
+        #en & {
+          margin-left: auto;
+          margin-right: 0;
+        }
+
+        #ar & {
+          margin-right: auto;
+          margin-left: 0;
+        }
+      }
+      #en & {
+        text-align: right;
+      }
+
+      #ar & {
+        text-align: left;
+      }
+    }
+
+    &:first-child {
+      #en & {
+        text-align: left;
+      }
+
+      #ar & {
+        text-align: right;
+      }
+    }
+
+    &:nth-child(n + 2) {
+      .progress__state__icon {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}

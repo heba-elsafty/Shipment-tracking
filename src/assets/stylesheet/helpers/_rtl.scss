@@ -1,0 +1,108 @@
+$direction: rtl;
+$right: right;
+$left: left;
+
+#ar {
+  dd,
+  dl,
+  dt,
+  li,
+  ol,
+  ul {
+    direction: $direction;
+    padding-right: 0;
+  }
+
+  .float-start {
+    float: $left;
+  }
+
+  .float-end {
+    float: $right;
+  }
+
+  ul {
+    padding-right: 0;
+  }
+
+  @if $enable-grid-classes {
+    @include make-grid-columns();
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      @each $size, $length in $spacers {
+        .pe#{$infix}-#{$size} {
+          padding-#{$left}: $length !important;
+          padding-#{$right}: 0 !important;
+        }
+
+        .ps#{$infix}-#{$size} {
+          padding-#{$right}: $length !important;
+          padding-#{$left}: 0 !important;
+        }
+
+        .me#{$infix}-#{$size} {
+          margin-#{$left}: $length !important;
+          margin-#{$right}: 0 !important;
+        }
+
+        .ms#{$infix}-#{$size} {
+          margin-#{$right}: $length !important;
+          margin-#{$left}: 0 !important;
+        }
+
+        .ms#{$infix}-n#{$size} {
+          margin-#{$right}: -$length !important;
+          margin-#{$left}: 0 !important;
+        }
+
+        .me#{$infix}-n#{$size} {
+          margin-#{$left}: -$length !important;
+          margin-#{$right}: 0 !important;
+        }
+      }
+
+      // RTL TEXT
+      .text#{$infix}-end {
+        text-align: left !important;
+      }
+
+      .text#{$infix}-start {
+        text-align: right !important;
+      }
+
+      .float#{$infix}-none {
+        float: none !important;
+      }
+
+      .ms#{$infix}-auto {
+        margin-#{$left}: auto !important;
+        margin-#{$right}: inherit !important;
+      }
+
+      .me#{$infix}-auto {
+        margin-#{$right}: auto !important;
+        margin-#{$left}: inherit !important;
+      }
+
+      .dropdown-toggle {
+        &::after {
+          margin-left: 0;
+          margin-right: 0.255em;
+        }
+      }
+
+      .dropdown-menu[data-bs-popper] {
+        left: auto;
+        right: 0;
+        text-align: right;
+        .dropdown-item {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

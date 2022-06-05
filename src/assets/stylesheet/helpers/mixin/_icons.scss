@@ -1,0 +1,10 @@
+@mixin icon-size {
+  @each $size, $value in $icon-sizes {
+    .icon-#{$size} {
+      width: $value;
+      height: $value;
+    }
+  }
+}
+
+@include icon-size();

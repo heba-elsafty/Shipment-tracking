@@ -1,0 +1,19 @@
+{
+  "bosta": "bosta",
+  "home": "Home",
+  "navbar": {
+    "price": "price",
+    "callSales": "Call sales",
+    "lang":{
+      "en": "EN",
+      "ar": "AR"
+    },
+    "trakShipment": "Trak shipment",
+    "TrackYourShipment": "Track your shipment",
+    "trackNo": "Track.No"
+  },
+  "at": "at",
+  "noFound": "No found {{filed}} ",
+  "date": "Date",
+  "notFound": "No found"
+}

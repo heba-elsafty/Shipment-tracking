@@ -1,0 +1,46 @@
+@import "../../assets/stylesheet/helpers/_custom-variables";
+
+.header {
+  .menu {
+    &__item {
+      margin: 0 1.5rem;
+      font-weight: 700;
+      @media (max-width: 991.98px) {
+        display: block;
+        margin: 0 0 1rem;
+      }
+    }
+  }
+
+  .nav-item {
+    .nav-link {
+      color: $dark-blue !important;
+      margin: 0 0.5rem;
+    }
+  }
+
+  .navbar-collapse {
+    @media (max-width: 991.98px) {
+      background-color: $gray-100;
+      margin-top: 0.5rem;
+      padding: 1rem;
+    }
+  }
+
+  .track-shipment {
+    min-width: 18.75rem;
+    padding: 1rem;
+
+    button {
+      #en & {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      #ar & {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+}
